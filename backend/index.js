@@ -59,14 +59,27 @@ const fs = require('fs');
 const path = require('path');
 
 // --- Firebase Initialization ---
+// In a production environment (like Render), store your service account key
+// as an environment variable. For local development, you can use the JSON file.
 try {
-  const serviceAccount = require('./serviceAccountKey.json');
+  let serviceAccount;
+  if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+    // Parse the service account from the environment variable
+    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+  } else {
+    // Fallback to the local file for development
+    serviceAccount = require('./serviceAccountKey.json');
+  }
+
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
   });
 } catch (error) {
-  console.error('Firebase Admin SDK initialization failed. Make sure serviceAccountKey.json is present in the backend directory.');
+  console.error('Firebase Admin SDK initialization failed:', error);
+  // Exit the process if Firebase fails to initialize, as it's a critical dependency.
+  process.exit(1);
 }
+
 const db = admin.firestore();
 
 // POST /download
