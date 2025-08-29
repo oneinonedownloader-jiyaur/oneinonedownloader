@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "82626877135",
+    "project_id": "all-in-one-downloader-vi-b21ae",
+    "storage_bucket": "all-in-one-downloader-vi-b21ae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82626877135:android:590ce8df8df8a1b9f0c9ba",
+        "android_client_info": {
+          "package_name": "com.allinonedownloader.video"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82626877135-e93453qk7sa0u9anlg0qemg6duq8p7uc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.allinonedownloader.video",
+            "certificate_hash": "5b472e7628950359eab07ce69a60ef427bbed079"
+          }
+        },
+        {
+          "client_id": "82626877135-dvdp2udmlr5abj00c5u17c46nh0mknhp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATrx43ZgNGoYXbyra5J3Dya9dLAPGvCT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82626877135-dvdp2udmlr5abj00c5u17c46nh0mknhp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
